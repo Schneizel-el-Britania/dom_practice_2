@@ -1,7 +1,7 @@
 'use strict';
 
 const inputForm = document.getElementById('form');
-const validator = /^\w+(?:.png|.jpg)$/g;
+const validator = /^[^\/\\|:*?"<>]+.(?:png|jpg)$/g;
 
 inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
