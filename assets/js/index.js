@@ -1,18 +1,9 @@
 'use strict';
 
-const inputForm = document.getElementById('form');
-const validator = /^[^\/\\|:*?"<>]+.(?:png|jpg)$/g;
-
-inputForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const { target: { textInput } } = e;
-  const inputValue = textInput.value.trim();
-
-  if (validator.test(inputValue)) {
-    console.log('succes: ', inputValue);
-  } else {
-    console.log('failure: ', inputValue);
+const timer = function (start = 1, end = 10) {
+  for (let i = start; i <= end; i++) {
+    setTimeout(() => console.log(start++), i * 500);
   }
-  inputForm.reset();
-})
+}
 
+timer();
